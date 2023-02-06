@@ -65,3 +65,6 @@ print(myresult)
 
 myresult = myresult.join(predprob)
 print(round(myresult.head(15),4))
+
+myscore = cross_val_score(mymodel, x, y,scoring = "accuracy",cv = 5)
+print(myscore)
