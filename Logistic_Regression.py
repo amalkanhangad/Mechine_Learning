@@ -46,3 +46,22 @@ mse = mean_squared_error(y,pred)
 print("\n",mse)
 
 print("\n",mymodel.intercept_)
+
+preprob = mymodel.predict_proba(x)
+print(preprob)
+
+predclass = mymodel.predict(x)
+print(predclass)
+
+mytable = mypd.crosstab(y,predclass)
+print(mytable)
+
+predprob = mypd.DataFrame(preprob, columns = ["Predicted 0","Predicted 1","Predicted 2"])
+print(predprob)
+
+predclass = mypd.DataFrame(predclass,columns = ["Predicate Class"])
+myresult = mydata.join(predclass)
+print(myresult)
+
+myresult = myresult.join(predprob)
+print(round(myresult.head(15),4))
