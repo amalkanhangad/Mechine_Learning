@@ -76,3 +76,5 @@ print(round(cv_accuracy*100,2))
 
 mymatrix = confusion_matrix(y,predclass)
 print(mymatrix)
+
+print(classification_report(y,predclass))

@@ -27,3 +27,4 @@ y_pred =logistic_Regression.predict(x_test)
 print(y_pred)
 
 print(classification_report(y_test,y_pred))
+
