@@ -68,3 +68,11 @@ print(round(myresult.head(15),4))
 
 myscore = cross_val_score(mymodel, x, y,scoring = "accuracy",cv = 5)
 print(myscore)
+
+cv_accuracy = myscore.mean()
+print(round(cv_accuracy*100,2))
+
+#Getting Confusion matrx by the package 'confusion matrix' from sklearn
+
+mymatrix = confusion_matrix(y,predclass)
+print(mymatrix)
